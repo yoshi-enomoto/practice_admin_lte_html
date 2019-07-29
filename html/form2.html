@@ -151,8 +151,8 @@ desired effect
               <!-- Content Header (Page header) -->
               <section class="content-header">
                   <h1>
-                    フォーム集
-                    <small>htmlのフォームで使用されるiput系を集めたもの</small>
+                    フォーム集2
+                    <small>htmlのフォームで使用されるiput系を集めたもの（抜粋）</small>
                   </h1>
                   <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> ダッシュボード</a></li>
@@ -162,16 +162,164 @@ desired effect
 
               <!-- Main content -->
               <section class="content container-fluid">
+                <!--------------------------
+                  | Your Page Content Here |
+                  -------------------------->
+
+                  <!-- htmlのフォームで使用されるiput系を集めたもの（抜粋） -->
+                  <!-- 参照：https://webliker.info/39533/ -->
                   <div class="box">
                       <div class="box-header with-border">
-                          <h3 class="box-title">タイトル</h3>
+                          <h3 class="box-title">input系の色々</h3>
                           <div class="box-tools">
                               <a href="#" title="" class="btn btn-sm btn-primary">登録</a>
                           </div>
                       </div>
-                      <div class="box-body">
-                        ボディ
-                      </div>
+                      <form class="form-horizontal" action="" method="post" accept-charset="utf-8">
+                          <div class="box-body">
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">備考欄</label>
+                                  <div class="col-md-9">
+                                      <textarea class="form-control" name=""></textarea>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      テキスト
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="text" name="" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      半角数字
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="number" name="" value="">
+                                      <!-- 半角数字のみ入力可能。 -->
+                                      <!-- 数字入力と右の矢印での入力に対応。 -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      電話番号
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" name="" value="">
+                                      <!-- 入力制限がない為、pattert属性を付加してやる -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      メールアドレス
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="email" name="" value="">
+                                      <!-- 自動的に@が含まれているか判定 -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      URL
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="url" name="" value="">
+                                      <!-- 「http(s)://〜」以外で始まる文字列以外はエラーが出る -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      パスワード
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="password" name="" value="">
+                                      <!-- 入力を伏せ字にする -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      検索
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="search" autocomplete="on" name="" value="" list="specific">
+                                          <!-- 候補を表示 -->
+                                          <datalist id="specific">
+                                              <option value="html">
+                                              <option value="css">
+                                              <option value="javascript">
+                                              <option value="webデザイン入門">
+                                          </datalist>
+                                      <!-- ×が表示される：これでは表示できない -->
+                                      <!-- datalistタグのlist属性と組み合わせることで入力候補の表示可能 -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-md-9 col-md-offset-3">
+                                      <input class="btn btn-default" type="reset" name="" value="りせっとボタン">
+                                      <!-- formタグの中に設置 -->
+                                      <!-- 他のinputの入力内容をリセットする -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="col-md-3 control-label">
+                                      カレンダー
+                                  </label>
+                                  <div class="col-md-9">
+                                      <input class="form-control" type="date" name="" value="">
+                                      <!-- 入力を伏せ字にする -->
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-md-3 control-label">
+                                      ファイルアップロード
+                                  </div>
+                                  <div class="col-md-9">
+                                      <label><input type="file" name=""></label>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-md-3 control-label">
+                                      カラーパレット
+                                  </div>
+                                  <div class="col-md-9">
+                                      <label><input type="color" name="" value="#008030"></label>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-md-3 control-label">
+                                      範囲を選択
+                                  </div>
+                                  <div class="col-md-9">
+                                      <label><input type="range" name="" min="0" max="100"></label>
+                                  </div>
+                              </div>
+                              <!-- ラジオボタン -->
+                              <div class="form-group">
+                                  <div class="col-md-3 control-label">
+                                      ラジオボタンその1
+                                  </div>
+                                  <div class="col-md-9">
+                                      <label><input type="radio" name="radio">Good</label>
+                                      <label><input type="radio" name="radio">Bad</label>
+                                  </div>
+                              </div>
+                              <!-- チェックボックス -->
+                              <div class="form-group">
+                                  <div class="col-md-3 control-label">
+                                      チェックボックスその1
+                                  </div>
+                                  <div class="col-md-9">
+                                      <label><input type="checkbox" name="radio">赤</label>
+                                      <label><input type="checkbox" name="radio">青</label>
+                                      <label><input type="checkbox" name="radio">黄</label>
+                                  </div>
+                              </div>
+
+
+                          </div>
+                      </form>
+
                       <div class="box-footer">
                         フッター
                       </div>

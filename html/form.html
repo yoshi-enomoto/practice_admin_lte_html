@@ -152,7 +152,6 @@ desired effect
               <section class="content-header">
                   <h1>
                     フォーム集
-                    <small>htmlのフォームで使用されるiput系を集めたもの</small>
                     <small>header、body、footerをboxで囲んだのに追加して、bodyなどをformで囲む（form部品のあるものを囲む）</small>
                     <small>その中で、form-groupを大枠として構成する</small>
                   </h1>
@@ -168,7 +167,6 @@ desired effect
                   | Your Page Content Here |
                   -------------------------->
 
-                  <!-- htmlのフォームで使用されるiput系を集めたもの -->
                   <!-- header、body、footerをboxで囲んだのに追加して、bodyなどをformで囲む（form部品のあるものを囲む） -->
                   <!-- その中で、form-groupを大枠として構成する -->
                   <div class="row">
@@ -212,7 +210,7 @@ desired effect
                               <div class="box-header with-border">
                                   <h3 class="box-title">2行構成フォーム</h3>
                               </div>
-                              <form action="" method="get" accept-charset="utf-8">
+                              <form action="" method="post" accept-charset="utf-8">
                                   <div class="box-body">
                                       <div class="form-group">
                                           <label>email</label>
@@ -249,7 +247,7 @@ desired effect
                                       <a href="#" title="" class="btn btn-sm btn-primary">登録</a>
                                   </div>
                               </div>
-                              <form class="form-horizontal" action="" method="get" accept-charset="utf-8">
+                              <form class="form-horizontal" action="" method="post" accept-charset="utf-8">
                                   <div class="box-body">
                                       <div class="form-group">
                                           <label class="col-md-4 control-label">email</label>
@@ -260,6 +258,7 @@ desired effect
                                       <!-- labelにクラス（md-4など） -->
                                       <!-- inputをdivで囲む（クラスをmdつける） -->
                                       <!-- inputにform-controlをつける -->
+                                      <!-- form-controlは入力を適用するクラス -->
                                       <div class="form-group">
                                           <label class="col-md-4">password</label>
                                           <input type="password" name="" value="">
