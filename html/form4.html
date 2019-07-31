@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-<link rel="stylesheet" type="text/css" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-<link rel="stylesheet" href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/build/css/bootstrap-datetimepicker.css">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
+    <!-- date picker -->
+    <link rel="stylesheet" href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/build/css/bootstrap-datetimepicker.css">
+    <!-- jQuery 2.1.4 -->
+    <!-- これが機能しない！ -->
+    <!-- <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-<script src="moment-ja.js"></script>
-<script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/src/js/bootstrap-datetimepicker.js"></script>
+    <!-- daterange picker -->
+    <!-- ここが解決できない -->
+    <!-- <script src="../bower_components/moment/moment.js"></script> -->
+    <!-- <script src="../bower_components/moment/locale/ja.js"></script> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <!-- <script src="moment-ja.js"></script> -->
+
+    <!-- <script src="../bower_components/bootstrap-datepicker//dist/locales/bootstrap-datepicker.ja.min.js"></script> -->
+    <script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/src/js/bootstrap-datetimepicker.js"></script>
+    <!-- <script src="../bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> -->
+    <!-- <script src="../bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js"></script> -->
+
 
 <script type="text/javascript">
 $(function () {
@@ -120,7 +140,7 @@ $(function () {
                     フォーム集（日時）
                     <br>
                     <small>wepページを参照し、日時フォームを作成</small>
-                    <small>ただし、現状はcdnを用いている為、adminLTEが崩れる</small>
+                    <small>ただし、現状は一部cdnを用いている</small>
                     <small>参照：https://qiita.com/albyte/items/775e92f02625bc0738a1</small>
                   </h1>
                   <ol class="breadcrumb">
