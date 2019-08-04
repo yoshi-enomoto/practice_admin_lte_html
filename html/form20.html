@@ -167,13 +167,16 @@ desired effect
                   -------------------------->
 
                   <!-- input=fileのバージョン違い -->
-                  <!-- 参照：https://qiita.com/ynakahira/items/46d44793827920282f75 -->
-                  <!-- 参照：http://vdeep.net/bootstrap-file -->
+                  <!-- 参照1：http://vdeep.net/bootstrap-file -->
+                  <!-- 参照2：https://qiita.com/ynakahira/items/46d44793827920282f75 -->
                   <div class="box">
                       <div class="box-header with-border">
                           <h3 class="box-title">input系の色々</h3>
                           <div class="box-tools">
-                              <a href="#" title="" class="btn btn-sm btn-primary">登録</a>
+                              <a href="#" title="" class="btn btn-sm btn-primary">
+                                  <i class="fa fa-fw fa-plus"></i>
+                                  登録
+                              </a>
                           </div>
                       </div>
                       <form  class="form-horizontal" action="" method="post" accept-charset="utf-8">
@@ -194,6 +197,7 @@ desired effect
                               </div>
                               <!-- ファイルアップロード -->
                               <!-- ずれを解消する術は、スタイルを充てるか、他のクラスの使用＆スタイル充てるしかなさそう -->
+                              <!-- ベース -->
                               <div class="form-group">
                                   <div class="col-md-3 control-label">
                                       <label>
@@ -204,7 +208,91 @@ desired effect
                                       <input type="file" name="">
                                   </div>
                               </div>
-
+                              <!-- その1 -->
+                              <div class="form-group">
+                                  <div class="col-md-9 col-md-offset-3">
+                                      <input type="file" name="">
+                                      <p class="help-block">※〜〜〜までアップロードできるよ！</p>
+                                  </div>
+                              </div>
+                              <!-- その2 -->
+                              <!-- 下部にスクリプトを記載 -->
+                              <!-- onclick属性を仕込む必要あり！ -->
+                                  <!-- 実際のfileアップロード部分は「display:none」で非表示。
+                                  ボタンがクリックされた時に、JavaScriptで非表示にしたフォームに値を渡す。 -->
+                              <div class="form-group">
+                                  <div class="col-md-9 col-md-offset-3">
+                                      <input id="lefile" type="file" name="" style="display: none;">
+                                      <div class="input-group">
+                                          <input type="text" id="photoCover" class="form-control" placeholder="フィアルを選択" name="">
+                                          <span class="input-group-btn" onclick="$('input[id=lefile]').click();">
+<!--                                               <button type="button" class="btn btn-success">
+                                                  browse
+                                              </button> -->
+                                              <button type="button" class="btn btn-success">
+                                                  <i class="fa fa-file"></i>
+                                                  <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                                              </button>
+                                          </span>
+                                      </div>
+                                      <p class="help-block">※〜〜〜までアップロードできるよ！</p>
+                                  </div>
+                              </div>
+                              <!-- 参照2 -->
+                              <!-- その0 -->
+                              <div class="form-group">
+                                  <div class="col-md-3 control-label">
+                                      <label>
+                                          ファイルアップロード
+                                      </label>
+                                  </div>
+                                  <div class="col-md-9" style="padding-top: 7px;">
+                                      <input type="file" name="">
+                                  </div>
+                              </div>
+                              <!-- その1 -->
+                              <!-- ファイル選択ボタンのデザイン変更 -->
+                              <div class="form-group">
+                                  <div class="col-md-9 col-md-offset-3">
+                                      <label>
+                                          <span class="btn btn-warning">
+                                              choose file
+                                              <input type="file" style="display: none;">
+                                          </span>
+                                      </label>
+                                  </div>
+                              </div>
+                              <!-- その2 -->
+                              <!-- ファイル名を表示する -->
+                              <div class="form-group">
+                                  <div class="col-md-9 col-md-offset-3">
+                                      <div class="input-group">
+                                          <label class="input-group-btn">
+                                              <span class="btn btn-warning">
+                                                  choose file
+                                                  <input type="file" style="display: none;">
+                                              </span>
+                                          </label>
+                                          <input type="text" class="form-control" readonly placeholder="">
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- その3 -->
+                              <!-- 画像：プレビュー表示 -->
+                              <div class="form-group">
+                                  <div class="col-md-9 col-md-offset-3">
+                                      <div class="imagePreview"></div>
+                                      <div class="input-group">
+                                          <label class="input-group-btn">
+                                              <span class="btn btn-warning">
+                                                  choose file
+                                                  <input type="file" style="display: none;" class="uploadFile">
+                                              </span>
+                                          </label>
+                                          <input type="text" class="form-control" readonly placeholder="">
+                                      </div>
+                                  </div>
+                              </div>
                           </div>
                       </form>
 
@@ -245,6 +333,45 @@ desired effect
         <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- AdminLTE App -->
         <script src="../dist/js/adminlte.min.js"></script>
+        <!-- その2用のスクリプト -->
+        <script>
+            $('input[id=lefile]').change(function() {
+                // $('#photoCover').val($(this).val());
+                // ファイルパスを取り除く記述に変更
+                $('#photoCover').val($(this).val().replace("C:\\fakepath\\", ""));
+            });
+        </script>
+        <!-- 参照2用のスクリプト（ファイルパスを表示させる） -->
+        <script>
+            $(document).on('change', ':file', function() {
+                var input = $(this),
+                numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+                input.parent().parent().next(':text').val(label);
+
+            // <!-- 参照2用のスクリプト（画像用のプレビュー） -->
+                var files = !!this.files ? this.files : [];
+                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+                if (/^image/.test( files[0].type)){ // only image file
+                    var reader = new FileReader(); // instance of the FileReader
+                    reader.readAsDataURL(files[0]); // read the local file
+                    reader.onloadend = function(){ // set image data as background of div
+                        input.parent().parent().parent().prev('.imagePreview').css("background-image", "url("+this.result+")");
+                    }
+                }
+            });
+        </script>
+
+        <style>
+            .imagePreview {
+                width: 100%;
+                height: 180px;
+                background-position: center center;
+                background-size: cover;
+                -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+                display: inline-block;
+            }
+        </style>
 
         <!-- Optionally, you can add Slimscroll and FastClick plugins.
              Both of these plugins are recommended to enhance the
