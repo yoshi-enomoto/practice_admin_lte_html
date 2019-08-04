@@ -151,8 +151,8 @@ desired effect
               <!-- Content Header (Page header) -->
               <section class="content-header">
                   <h1>
-                    フォーム集2
-                    <small>htmlのフォームで使用されるiput系を集めたもの（抜粋）</small>
+                    フォーム集22<br>
+                    <small>フォーム集2を2行構成に書き換えたもの</small>
                   </h1>
                   <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> ダッシュボード</a></li>
@@ -166,8 +166,8 @@ desired effect
                   | Your Page Content Here |
                   -------------------------->
 
-                  <!-- htmlのフォームで使用されるiput系を集めたもの（抜粋） -->
-                  <!-- 参照：https://webliker.info/39533/ -->
+                  <!-- フォーム集2を2行構成に書き換えたもの -->
+                  <!-- 参照：http://bootstrap3.cyberlab.info/css/forms-basic.html -->
                   <div class="box">
                       <div class="box-header with-border">
                           <h3 class="box-title">input系の色々</h3>
@@ -175,193 +175,184 @@ desired effect
                               <a href="#" title="" class="btn btn-sm btn-primary">登録</a>
                           </div>
                       </div>
-                      <form class="form-horizontal" action="" method="post" accept-charset="utf-8">
+                      <form action="" method="post" accept-charset="utf-8">
                           <div class="box-body">
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">備考欄</label>
-                                  <div class="col-md-9">
+                                  <label>備考欄</label>
                                       <textarea class="form-control" name=""></textarea>
-                                  </div>
+                                        <!-- form-controlで丸くならない -->
+                                        <!-- 2つのcssが当たっており、0pxが優先されている -->
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       テキスト
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="text" name="" value="">
-                                  </div>
+                                  <input class="form-control" type="text" name="" value="">
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       半角数字
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="number" name="" value="">
-                                      <!-- 半角数字のみ入力可能。 -->
-                                      <!-- 数字入力と右の矢印での入力に対応。 -->
-                                  </div>
+                                  <input class="form-control" type="number" name="" value="">
+                                  <!-- 半角数字のみ入力可能。 -->
+                                  <!-- 数字入力と右の矢印での入力に対応。 -->
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       電話番号
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" name="" value="">
-                                      <!-- 入力制限がない為、pattert属性を付加してやる -->
-                                  </div>
+                                  <input class="form-control" type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" name="" value="">
+                                  <!-- 入力制限がない為、pattert属性を付加してやる -->
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       メールアドレス
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="email" name="" value="">
-                                      <!-- 自動的に@が含まれているか判定 -->
-                                  </div>
+                                  <input class="form-control" type="email" name="" value="">
+                                  <!-- 自動的に@が含まれているか判定 -->
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       URL
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="url" name="" value="">
-                                      <!-- 「http(s)://〜」以外で始まる文字列以外はエラーが出る -->
-                                  </div>
+                                  <input class="form-control" type="url" name="" value="">
+                                  <!-- 「http(s)://〜」以外で始まる文字列以外はエラーが出る -->
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       パスワード
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="password" name="" value="">
-                                      <!-- 入力を伏せ字にする -->
-                                  </div>
+                                  <input class="form-control" type="password" name="" value="">
+                                  <!-- 入力を伏せ字にする -->
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       検索
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="search" autocomplete="on" name="" value="" list="specific">
-                                          <!-- 候補を表示 -->
-                                          <datalist id="specific">
-                                              <option value="html">
-                                              <option value="css">
-                                              <option value="javascript">
-                                              <option value="webデザイン入門">
-                                          </datalist>
-                                      <!-- ×が表示される：これでは表示できない -->
-                                      <!-- datalistタグのlist属性と組み合わせることで入力候補の表示可能 -->
-                                  </div>
+                                  <input class="form-control" type="search" autocomplete="on" name="" value="" list="specific">
+                                      <!-- 候補を表示 -->
+                                      <datalist id="specific">
+                                          <option value="html">
+                                          <option value="css">
+                                          <option value="javascript">
+                                          <option value="webデザイン入門">
+                                      </datalist>
+                                  <!-- ×が表示される：これでは表示できない -->
+                                  <!-- datalistタグのlist属性と組み合わせることで入力候補の表示可能 -->
                               </div>
                               <div class="form-group">
-                                  <div class="col-md-9 col-md-offset-3">
-                                      <input class="btn btn-default" type="reset" name="" value="りせっとボタン">
-                                      <!-- formタグの中に設置 -->
-                                      <!-- 他のinputの入力内容をリセットする -->
-                                  </div>
+                                  <input class="btn btn-default" type="reset" name="" value="りせっとボタン">
+                                  <!-- formタグの中に設置 -->
+                                  <!-- 他のinputの入力内容をリセットする -->
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       カレンダー
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="date" name="" value="">
-                                  </div>
+                                  <input class="form-control" type="date" name="" value="">
                               </div>
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">
+                                  <label>
                                       時間
                                   </label>
-                                  <div class="col-md-9">
-                                      <input class="form-control" type="time" name="" value="">
-                                  </div>
+                                  <input class="form-control" type="time" name="" value="">
+                              </div>
+                              <!-- ファイルアップロード -->
+                              <div class="form-group">
+                                  <!-- aとb下記でpaddingが異なる -->
+                                  <!-- a -->
+                                  <label>ファイルアップロード</label>
+                                  <input type="file" name="">
+                                  <!-- b：狭い -->
+    <!--                                       <label>ファイルアップロード
+                                      <input type="file" name="">
+                                  </label> -->
                               </div>
                               <!-- セレクト -->
                               <div class="form-group">
-                                  <label class="col-md-3 control-label">セレクト</label>
-                                  <div class="col-md-9">
-                                      <select class="form-control" name="">
-                                          <option value="" selected>選択しましょ</option>
-                                          <option value="">a</option>
-                                          <option value="">b</option>
-                                          <option value="">c</option>
-                                      </select>
-                                  </div>
-                              </div>
-                              <!-- ファイルアップロード -->
-                              <!-- ずれを解消する術は、スタイルを充てるか、他のクラスの使用＆スタイル充てるしかなさそう -->
-                              <div class="form-group">
-                                  <div class="col-md-3 control-label">
-                                      ファイルアップロード
-                                  </div>
-                                  <div class="col-md-9">
-                                      <!-- 方法その1 -->
-                                      <label style="padding-top: 7px;">
-                                          <input type="file" name="">
-                                      </label>
-                                      <!-- 方法その2 -->
-<!--                                       <label class="radio-inline" style="padding-left: 0px;">
-                                          <input type="file" name="">
-                                      </label> -->
-                                  </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <div class="col-md-3 control-label">
-                                      カラーパレット
-                                  </div>
-                                  <div class="col-md-9">
-                                      <label><input type="color" name="" value="#008030"></label>
-                                  </div>
+                                  <label>セレクト</label>
+                                  <select class="form-control" name="">
+                                      <option value="" selected>選択しましょ</option>
+                                      <option value="">a</option>
+                                      <option value="">b</option>
+                                      <option value="">c</option>
+                                  </select>
                               </div>
                               <div class="form-group">
-                                  <div class="col-md-3 control-label">
-                                      範囲を選択
-                                  </div>
-                                  <div class="col-md-9">
-                                      <label><input type="range" name="" min="0" max="100"></label>
-                                  </div>
+                                  <label>カラーパレット</label>
+                                  <input class="form-control" type="color" name="" value="#008030">
+                              </div>
+                              <div class="form-group">
+                                  <label>範囲を選択</label>
+                                  <input type="range" name="" min="0" max="100">
                               </div>
                               <!-- ラジオボタン -->
                               <div class="form-group">
-                                  <div class="col-md-3 control-label">
-                                      ラジオボタンその1
-                                  </div>
-                                  <div class="col-md-9">
-                                      <label class="radio-inline">
+                                  <label>ラジオボタンその1</label>
+                                  <div class="radio">
+                                      <label>
                                           <input type="radio" name="radio">Good
                                       </label>
-                                      <label class="radio-inline">
+                                      <label>
+                                          <input type="radio" name="radio">Bad
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>
+                                      ラジオボタンその2
+                                  </label>
+                                  <div class="radio">
+                                      <label>
+                                          <input type="radio" name="radio">Good
+                                      </label>
+                                  </div>
+                                  <div class="radio">
+                                      <label>
                                           <input type="radio" name="radio">Bad
                                       </label>
                                   </div>
                               </div>
                               <!-- チェックボックス -->
                               <div class="form-group">
-                                  <div class="col-md-3 control-label">
-                                      チェックボックスその1
-                                  </div>
-                                  <div class="col-md-9">
-                                      <label class="checkbox-inline">
+                                  <label>チェックボックスその1</label>
+                                  <div class="checkbox">
+                                      <label>
                                           <input type="checkbox" name="radio">赤
                                       </label>
-                                      <label class="checkbox-inline">
+                                      <label>
                                           <input type="checkbox" name="radio">青
                                       </label>
-                                      <label class="checkbox-inline">
+                                      <label>
                                           <input type="checkbox" name="radio">黄
                                       </label>
                                   </div>
                               </div>
-
-
+                              <div class="form-group">
+                                  <label>チェックボックスその2</label>
+                                  <div class="checkbox">
+                                      <label>
+                                          <input type="checkbox" name="radio">赤
+                                      </label>
+                                  </div>
+                                  <div class="checkbox">
+                                      <label>
+                                          <input type="checkbox" name="radio">青
+                                      </label>
+                                  </div>
+                                  <div class="checkbox">
+                                      <label>
+                                          <input type="checkbox" name="radio">黄
+                                      </label>
+                                  </div>
+                              </div>
                           </div>
                       </form>
 
                       <div class="box-footer">
                         フッター<br>
-                        <a href="./form22.html" title="">2行構成へのリンク</a>
+                        <a href="./form2.html" title="">1行構成へのリンク</a><br>
+                        <a href="./form20.html" title="">input=fileの様々へのリンク</a>
                       </div>
                   </div>
 
