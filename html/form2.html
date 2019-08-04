@@ -270,14 +270,21 @@ desired effect
                                       <!-- 入力を伏せ字にする -->
                                   </div>
                               </div>
-                              <!-- ずれている -->
-
+                              <!-- ファイルアップロード -->
+                              <!-- ずれを解消する術は、スタイルを充てるか、他のクラスの使用＆スタイル充てるしかなさそう -->
                               <div class="form-group">
                                   <div class="col-md-3 control-label">
                                       ファイルアップロード
                                   </div>
                                   <div class="col-md-9">
-                                      <label><input type="file" name=""></label>
+                                      <!-- 方法その1 -->
+                                      <label style="padding-top: 7px;">
+                                          <input type="file" name="">
+                                      </label>
+                                      <!-- 方法その2 -->
+<!--                                       <label class="radio-inline" style="padding-left: 0px;">
+                                          <input type="file" name="">
+                                      </label> -->
                                   </div>
                               </div>
 
